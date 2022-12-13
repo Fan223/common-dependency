@@ -38,282 +38,143 @@
     <log4j2.starter.version>3.0.0</log4j2.starter.version>
   </properties>
 
-<!--  <dependencyManagement>-->
-<!--    <dependencies>-->
-<!--      &lt;!&ndash; MySQL &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>mysql</groupId>-->
-<!--        <artifactId>mysql-connector-java</artifactId>-->
-<!--        <version>${mysql.version}</version>-->
-<!--      </dependency>-->
+  <dependencyManagement>
+    <dependencies>
+      <!-- MySQL -->
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; Lombok &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.projectlombok</groupId>-->
-<!--        <artifactId>lombok</artifactId>-->
-<!--        <version>${lombok.version}</version>-->
-<!--      </dependency>-->
+      <!-- Lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; mybatis-plus &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.baomidou</groupId>-->
-<!--        <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--        <version>${mybatis-plus.version}</version>-->
-<!--      </dependency>-->
-<!--      &lt;!&ndash; 动态数据源 &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.baomidou</groupId>-->
-<!--        <artifactId>dynamic-datasource-spring-boot-starter</artifactId>-->
-<!--        <version>${mybatis-plus.version}</version>-->
-<!--      </dependency>-->
-<!--      &lt;!&ndash; mybatis-plus-generator 生成器&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.baomidou</groupId>-->
-<!--        <artifactId>mybatis-plus-generator</artifactId>-->
-<!--        <version>${mybatis-plus.version}</version>-->
-<!--      </dependency>-->
-<!--      &lt;!&ndash; freemarker &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-freemarker</artifactId>-->
-<!--        <version>${freemarker.version}</version>-->
-<!--      </dependency>-->
+      <!-- mybatis-plus -->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>${mybatis-plus.version}</version>
+      </dependency>
+      <!-- 动态数据源 -->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+        <version>${mybatis-plus.version}</version>
+      </dependency>
+      <!-- mybatis-plus-generator 生成器-->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-generator</artifactId>
+        <version>${mybatis-plus.version}</version>
+      </dependency>
+      <!-- freemarker -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-freemarker</artifactId>
+        <version>3.0.0</version>
+      </dependency>
 
-<!--      &lt;!&ndash; Druid &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.alibaba</groupId>-->
-<!--        <artifactId>druid-spring-boot-starter</artifactId>-->
-<!--        <version>${druid.version}</version>-->
-<!--      </dependency>-->
+      <!-- Druid -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; springfox swagger&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>io.springfox</groupId>-->
-<!--        <artifactId>springfox-boot-starter</artifactId>-->
-<!--        <version>${springfox.version}</version>-->
-<!--      </dependency>-->
+      <!-- springfox swagger-->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-boot-starter</artifactId>
+        <version>${springfox.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; Jackson &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--        <artifactId>jackson-core</artifactId>-->
-<!--        <version>${jackson.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--        <artifactId>jackson-annotations</artifactId>-->
-<!--        <version>${jackson.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--        <artifactId>jackson-databind</artifactId>-->
-<!--        <version>${jackson.version}</version>-->
-<!--      </dependency>-->
+      <!-- Jackson -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; commons-lang3 &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.apache.commons</groupId>-->
-<!--        <artifactId>commons-lang3</artifactId>-->
-<!--        <version>${commons.lang3.version}</version>-->
-<!--      </dependency>-->
+      <!-- commons-lang3 -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons.lang3.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; hutool-all &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>cn.hutool</groupId>-->
-<!--        <artifactId>hutool-all</artifactId>-->
-<!--        <version>${hutool.version}</version>-->
-<!--      </dependency>-->
+      <!-- hutool-all -->
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; jjwt &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>io.jsonwebtoken</groupId>-->
-<!--        <artifactId>jjwt</artifactId>-->
-<!--        <version>${jjwt.version}</version>-->
-<!--      </dependency>-->
+      <!-- jjwt -->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${jjwt.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; Kaptcha &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>cloud.agileframework</groupId>-->
-<!--        <artifactId>spring-boot-starter-kaptcha</artifactId>-->
-<!--        <version>${kaptcha.version}</version>-->
-<!--      </dependency>-->
+      <!-- Kaptcha -->
+      <dependency>
+        <groupId>cloud.agileframework</groupId>
+        <artifactId>spring-boot-starter-kaptcha</artifactId>
+        <version>2.1.0.M73</version>
+      </dependency>
 
-<!--      &lt;!&ndash; Mapstruct &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.mapstruct</groupId>-->
-<!--        <artifactId>mapstruct</artifactId>-->
-<!--        <version>${mapstruct.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>org.mapstruct</groupId>-->
-<!--        <artifactId>mapstruct-processor</artifactId>-->
-<!--        <version>${mapstruct.version}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--        <groupId>org.mapstruct</groupId>-->
-<!--        <artifactId>mapstruct-jdk8</artifactId>-->
-<!--        <version>${mapstruct.version}</version>-->
-<!--      </dependency>-->
+      <!-- Mapstruct -->
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-processor</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-jdk8</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; p6spy &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>p6spy</groupId>-->
-<!--        <artifactId>p6spy</artifactId>-->
-<!--        <version>${p6spy.version}</version>-->
-<!--      </dependency>-->
+      <!-- p6spy -->
+      <dependency>
+        <groupId>p6spy</groupId>
+        <artifactId>p6spy</artifactId>
+        <version>${p6spy.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; EasyExcel &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.alibaba</groupId>-->
-<!--        <artifactId>easyexcel</artifactId>-->
-<!--        <version>${easy-excell.version}</version>-->
-<!--      </dependency>-->
+      <!-- EasyExcel -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>easyexcel</artifactId>
+        <version>${easy-excell.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; log4j2 &ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-log4j2</artifactId>-->
-<!--        <version>${log4j2.starter.version}</version>-->
-<!--      </dependency>-->
-<!--    </dependencies>-->
-<!--  </dependencyManagement>-->
-
-  <dependencies>
-    <!-- MySQL -->
-    <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>${mysql.version}</version>
-    </dependency>
-
-    <!-- Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-    </dependency>
-
-    <!-- mybatis-plus -->
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-boot-starter</artifactId>
-      <version>${mybatis-plus.version}</version>
-    </dependency>
-    <!-- 动态数据源 -->
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-      <version>${mybatis-plus.version}</version>
-    </dependency>
-    <!-- mybatis-plus-generator 生成器-->
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-generator</artifactId>
-      <version>${mybatis-plus.version}</version>
-    </dependency>
-
-    <!-- freemarker -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-freemarker</artifactId>
-      <version>3.0.0</version>
-    </dependency>
-
-    <!-- Druid -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>druid-spring-boot-starter</artifactId>
-      <version>${druid.version}</version>
-    </dependency>
-
-    <!-- springfox swagger-->
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-boot-starter</artifactId>
-      <version>${springfox.version}</version>
-    </dependency>
-
-    <!-- Jackson -->
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-annotations</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jackson.version}</version>
-    </dependency>
-
-    <!-- commons-lang3 -->
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>${commons.lang3.version}</version>
-    </dependency>
-
-    <!-- hutool-all -->
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
-      <version>${hutool.version}</version>
-    </dependency>
-
-    <!-- jjwt -->
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt</artifactId>
-      <version>${jjwt.version}</version>
-    </dependency>
-
-    <!-- Kaptcha -->
-    <dependency>
-      <groupId>cloud.agileframework</groupId>
-      <artifactId>spring-boot-starter-kaptcha</artifactId>
-      <version>2.1.0.M73</version>
-    </dependency>
-
-    <!-- Mapstruct -->
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct</artifactId>
-      <version>${mapstruct.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct-processor</artifactId>
-      <version>${mapstruct.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct-jdk8</artifactId>
-      <version>${mapstruct.version}</version>
-    </dependency>
-
-    <!-- p6spy -->
-    <dependency>
-      <groupId>p6spy</groupId>
-      <artifactId>p6spy</artifactId>
-      <version>${p6spy.version}</version>
-    </dependency>
-
-    <!-- EasyExcel -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>easyexcel</artifactId>
-      <version>${easy-excell.version}</version>
-    </dependency>
-
-    <!-- log4j2 -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-log4j2</artifactId>
-      <version>${log4j2.starter.version}</version>
-    </dependency>
-  </dependencies>
+      <!-- log4j2 -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
+        <version>${log4j2.starter.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
