@@ -37,6 +37,7 @@
     <p6spy.version>3.9.1</p6spy.version>
     <easy-excell.version>3.1.3</easy-excell.version>
     <log4j2.starter.version>3.0.0</log4j2.starter.version>
+    <geoip2.version>4.0.0</geoip2.version>
   </properties>
 
   <dependencyManagement>
@@ -175,6 +176,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-log4j2</artifactId>
         <version>${log4j2.starter.version}</version>
+      </dependency>
+
+      <!-- GeoIP2 -->
+      <dependency>
+        <groupId>com.maxmind.geoip2</groupId>
+        <artifactId>geoip2</artifactId>
+        <version>${geoip2.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
