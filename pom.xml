@@ -22,6 +22,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+
     <mysql.version>8.0.19</mysql.version>
     <lombok.version>1.18.24</lombok.version>
     <mybatis-plus.version>3.5.2</mybatis-plus.version>
@@ -39,6 +40,7 @@
     <log4j2.starter.version>3.0.0</log4j2.starter.version>
     <geoip2.version>2.16.1</geoip2.version>
     <userAgentUtil.version>1.21</userAgentUtil.version>
+    <guava.version>31.1-jre</guava.version>
   </properties>
 
   <dependencyManagement>
@@ -191,6 +193,13 @@
         <groupId>eu.bitwalker</groupId>
         <artifactId>UserAgentUtils</artifactId>
         <version>${userAgentUtil.version}</version>
+      </dependency>
+
+      <!-- Guava -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
