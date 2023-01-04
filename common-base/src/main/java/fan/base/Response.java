@@ -1,4 +1,4 @@
-package fan;
+package fan.base;
 
 import lombok.Builder;
 
@@ -41,7 +41,7 @@ public class Response {
     }
 
     /**
-     * 成功响应
+     * 成功响应, 响应码默认 200
      *
      * @param message 返回信息
      * @param data    返回数据
@@ -54,7 +54,7 @@ public class Response {
     }
 
     /**
-     * 成功响应
+     * 成功响应, 响应码默认 200, 返回信息默认 "操作成功"
      *
      * @param data 返回数据
      * @return {@link Response}
@@ -80,7 +80,7 @@ public class Response {
     }
 
     /**
-     * 失败响应
+     * 失败响应, 响应码默认 500
      *
      * @param message 返回信息
      * @param data    返回数据
@@ -93,7 +93,7 @@ public class Response {
     }
 
     /**
-     * 失败响应
+     * 失败响应, 响应码默认 500, 返回信息默认 "操作失败"
      *
      * @param data 返回数据
      * @return {@link Response}

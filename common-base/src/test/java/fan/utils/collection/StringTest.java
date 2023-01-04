@@ -1,4 +1,4 @@
-package fan.collection;
+package fan.utils.collection;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,6 +17,10 @@ class StringTest {
         Assertions.assertTrue(StringUtil.isBlank(""));
         Assertions.assertTrue(StringUtil.isBlank("  "));
         Assertions.assertFalse(StringUtil.isBlank("  1 "));
+        Assertions.assertFalse(StringUtil.isBlank("  \t "));
+
+        Assertions.assertTrue(StringUtil.isBlank(new StringBuffer("  ")));
+        Assertions.assertTrue(StringUtil.isBlank(new StringBuilder("  ")));
     }
 
     @Test
@@ -24,6 +28,10 @@ class StringTest {
         Assertions.assertFalse(StringUtil.isNotBlank(null));
         Assertions.assertFalse(StringUtil.isNotBlank(""));
         Assertions.assertFalse(StringUtil.isNotBlank("  "));
+        Assertions.assertFalse(StringUtil.isNotBlank("  \t "));
         Assertions.assertTrue(StringUtil.isNotBlank("  1 "));
+
+        Assertions.assertFalse(StringUtil.isNotBlank(new StringBuffer("  ")));
+        Assertions.assertFalse(StringUtil.isNotBlank(new StringBuilder("  ")));
     }
 }

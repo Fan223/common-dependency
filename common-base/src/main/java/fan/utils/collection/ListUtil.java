@@ -1,4 +1,4 @@
-package fan.collection;
+package fan.utils.collection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class ListUtil {
      * @author Fan
      * @since 2023/1/3 16:37
      */
-    public static boolean isBlank(List<?> list) {
+    public static boolean isEmpty(List<?> list) {
         return null == list || list.isEmpty();
     }
 
@@ -40,27 +40,8 @@ public class ListUtil {
      * @author Fan
      * @since 2023/1/3 16:37
      */
-    public static boolean isNotBlank(List<?> list) {
-        return !isBlank(list);
-    }
-
-    /**
-     * 将多个对象转换为列表
-     *
-     * @param clazz 转换的泛型类型
-     * @param items 多个对象
-     * @return {@link List<T>}
-     * @author Fan
-     * @since 2023/1/3 16:41
-     */
-    public static <T> List<T> transToList(Class<T> clazz, Object... items) {
-        List<T> list = new ArrayList<>();
-
-        for (Object item : items) {
-            list.add(clazz.cast(item));
-        }
-
-        return list;
+    public static boolean isNotEmpty(List<?> list) {
+        return !isEmpty(list);
     }
 
     /**
