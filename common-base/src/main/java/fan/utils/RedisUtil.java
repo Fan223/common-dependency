@@ -4,6 +4,7 @@ import fan.utils.collection.ArrayUtil;
 import fan.utils.collection.ListUtil;
 import fan.utils.collection.StringUtil;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -16,21 +17,13 @@ import java.util.concurrent.TimeUnit;
  * @author Fan
  * @since 2023/1/4 11:02
  */
+@Component
 public class RedisUtil {
-
-    /**
-     * 该类均为静态方法, 不需要实例化, 而 Java 为每个类添加了一个隐式公共构造函数, 因此, 应至少定义一个非公共构造函数
-     *
-     * @author Fan
-     * @since 2023/1/4 15:29
-     */
-    private RedisUtil() {
-    }
 
     private static RedisTemplate<String, Object> redisTemplate;
 
     @Resource
-    public static void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
+    public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
         RedisUtil.redisTemplate = redisTemplate;
     }
 

@@ -8,9 +8,13 @@ package fan.base;
  */
 public class BaseQuery {
 
-    /** 当前页 */
+    /**
+     * 当前页
+     */
     private int currentPage;
 
-    /** 页面大小 */
+    /**
+     * 页面大小
+     */
     private int pageSize;
 }
