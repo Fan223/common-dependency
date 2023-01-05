@@ -1,6 +1,7 @@
 package fan.base;
 
 import lombok.Builder;
+import org.springframework.context.annotation.Conditional;
 
 /**
  * 统一响应结果返回类

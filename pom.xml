@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.6</version>
+        <version>2.7.7</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -13,6 +13,7 @@
 
     <modules>
         <module>common-base</module>
+        <module>common-config</module>
     </modules>
 
     <groupId>fan</groupId>
@@ -52,6 +53,11 @@
             <dependency>
                 <groupId>fan</groupId>
                 <artifactId>common-base</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>fan</groupId>
+                <artifactId>common-config</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
