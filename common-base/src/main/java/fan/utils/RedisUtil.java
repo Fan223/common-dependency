@@ -24,6 +24,17 @@ public class RedisUtil {
 
     @Resource
     public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
+        RedisUtil.staticSetRedisTemplate(redisTemplate);
+    }
+
+    /**
+     * 静态注入方法, 解决多线程下可能出现的并发问题
+     *
+     * @param redisTemplate RedisTemplate
+     * @author Fan
+     * @since 2023/1/5 9:38
+     */
+    public static synchronized void staticSetRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
         RedisUtil.redisTemplate = redisTemplate;
     }
 
@@ -33,7 +44,7 @@ public class RedisUtil {
      * @param key    Key
      * @param expire 过期时间, 单位秒
      * @return {@link boolean}
-     * @author zhaojunjie
+     * @author Fan
      * @since 2023/1/4 17:06
      */
     public static boolean expire(String key, long expire) {
