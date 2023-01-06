@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 列表工具类
+ * List 工具类
  *
  * @author Fan
  * @since 2023/1/3 16:29
@@ -21,7 +21,7 @@ public class ListUtil {
     }
 
     /**
-     * 判断列表是否为空
+     * 判断 List 是否为空
      *
      * @param list 列表
      * @return {@link boolean}
@@ -33,7 +33,7 @@ public class ListUtil {
     }
 
     /**
-     * 判断列表是否不为空
+     * 判断 List 是否不为空
      *
      * @param list 列表
      * @return {@link boolean}
@@ -45,10 +45,10 @@ public class ListUtil {
     }
 
     /**
-     * 将 Object 类型的列表数据转换为 List 类型
+     * 将 Object 类型的 List 数据转换为 List 类型
      *
      * @param clazz  转换的泛型类型
-     * @param object 列表数据
+     * @param object List 数据
      * @return {@link List<T>}
      * @author Fan
      * @since 2023/1/3 17:08
@@ -60,6 +60,25 @@ public class ListUtil {
             for (Object obj : (List<?>) object) {
                 list.add(clazz.cast(obj));
             }
+        }
+
+        return list;
+    }
+
+    /**
+     * 将多个元素转为指定泛型的 List
+     *
+     * @param clazz 泛型类型
+     * @param elements 多个元素
+     * @return {@link List<T>}
+     * @author zhaojunjie
+     * @since 2023/1/6 11:38
+     */
+    public static <T> List<T> transToList(Class<T> clazz, Object... elements) {
+        List<T> list = new ArrayList<>();
+
+        for (Object element : elements) {
+            list.add(clazz.cast(element));
         }
 
         return list;

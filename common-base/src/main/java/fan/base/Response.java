@@ -1,6 +1,7 @@
 package fan.base;
 
 import lombok.Builder;
+import lombok.Getter;
 import org.springframework.context.annotation.Conditional;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Conditional;
  * @since 2023/1/3 15:20
  */
 @Builder
+@Getter
 public class Response {
 
     /**
