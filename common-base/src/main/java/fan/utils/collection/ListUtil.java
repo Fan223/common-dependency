@@ -1,6 +1,8 @@
 package fan.utils.collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,6 +20,51 @@ public class ListUtil {
      * @since 2023/1/3 16:37
      */
     private ListUtil() {
+    }
+
+    /**
+     * 新建一个空 List
+     *
+     * @param isLinked 是否为 LinkedList
+     * @return {@link List<T>}
+     * @author zhaojunjie
+     * @since 2023/1/9 9:26
+     */
+    public static <T> List<T> list(boolean isLinked) {
+        return isLinked ? new LinkedList<>() : new ArrayList<>();
+    }
+
+    /**
+     * 新建一个指定泛型的空 List
+     *
+     * @param isLinked 是否为 LinkedList
+     * @param clazz    泛型类型
+     * @return {@link List<T>}
+     * @author zhaojunjie
+     * @since 2023/1/9 9:31
+     */
+    public static <T> List<T> list(boolean isLinked, Class<T> clazz) {
+        return isLinked ? new LinkedList<>() : new ArrayList<>();
+    }
+
+    /**
+     * 新建一个传入多个值的 List
+     *
+     * @param isLinked 是否为 LinkedList
+     * @param values   多个值
+     * @return {@link List<T>}
+     * @author zhaojunjie
+     * @since 2023/1/9 9:39
+     */
+    @SafeVarargs
+    public static <T> List<T> list(boolean isLinked, T... values) {
+        if (ArrayUtil.isEmpty(values)) {
+            return list(isLinked);
+        }
+
+        final List<T> arrayList = isLinked ? new LinkedList<>() : new ArrayList<>(values.length);
+        Collections.addAll(arrayList, values);
+        return arrayList;
     }
 
     /**
@@ -60,25 +107,6 @@ public class ListUtil {
             for (Object obj : (List<?>) object) {
                 list.add(clazz.cast(obj));
             }
-        }
-
-        return list;
-    }
-
-    /**
-     * 将多个元素转为指定泛型的 List
-     *
-     * @param clazz 泛型类型
-     * @param elements 多个元素
-     * @return {@link List<T>}
-     * @author zhaojunjie
-     * @since 2023/1/6 11:38
-     */
-    public static <T> List<T> transToList(Class<T> clazz, Object... elements) {
-        List<T> list = new ArrayList<>();
-
-        for (Object element : elements) {
-            list.add(clazz.cast(element));
         }
 
         return list;
