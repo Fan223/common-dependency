@@ -68,6 +68,29 @@ public class ListUtil {
     }
 
     /**
+     * 创建一个 ArrayList
+     *
+     * @return {@link ArrayList<T>}
+     * @author Fan
+     * @since 2023/1/11 17:23
+     */
+    public static <T> ArrayList<T> toList() {
+        return new ArrayList<>();
+    }
+
+    /**
+     * 创建一个指定泛型类型的 ArrayList
+     *
+     * @param clazz 泛型类型
+     * @return {@link ArrayList<T>}
+     * @author Fan
+     * @since 2023/1/11 17:20
+     */
+    public static <T> ArrayList<T> toList(Class<T> clazz) {
+        return new ArrayList<>();
+    }
+
+    /**
      * 判断 List 是否为空
      *
      * @param list 列表
