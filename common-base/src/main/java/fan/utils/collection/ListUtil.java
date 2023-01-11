@@ -68,26 +68,29 @@ public class ListUtil {
     }
 
     /**
-     * 创建一个 ArrayList
+     * 新建一个 ArrayList
      *
+     * @param values 多个值
      * @return {@link ArrayList<T>}
      * @author Fan
-     * @since 2023/1/11 17:23
+     * @since 2023/1/11 17:29
      */
-    public static <T> ArrayList<T> toList() {
-        return new ArrayList<>();
+    @SafeVarargs
+    public static <T> ArrayList<T> toList(T... values) {
+        return (ArrayList<T>) list(false, values);
     }
 
     /**
-     * 创建一个指定泛型类型的 ArrayList
+     * 新建一个 LinkedList
      *
-     * @param clazz 泛型类型
-     * @return {@link ArrayList<T>}
+     * @param values 多个值
+     * @return {@link LinkedList<T>}
      * @author Fan
-     * @since 2023/1/11 17:20
+     * @since 2023/1/11 17:28
      */
-    public static <T> ArrayList<T> toList(Class<T> clazz) {
-        return new ArrayList<>();
+    @SafeVarargs
+    public static <T> LinkedList<T> toLinkedList(T... values) {
+        return (LinkedList<T>) list(true, values);
     }
 
     /**
